@@ -1,0 +1,308 @@
+:root{
+    --color-font-primary:#FFF8F1;
+    --color-primary:#F6A89E;
+    --color-secondary:#7DBBC3;
+    --color-third:#2A3E45;
+    --color-fourth:#FFE2A9;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/**************/
+/* Background */
+/**************/
+.backgroundImg{
+    background-image: url("/img/background.jpg");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 120vh;
+}
+
+/***************/
+/*    Title    */
+/***************/
+.titleContainer{
+    width: 100%;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.titleContainer h1{
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--color-third);
+    text-transform: uppercase;
+}
+
+/***********************/
+/* Promodoro Container */
+/***********************/
+.pomodoroContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+    max-width: fit-content;
+    margin: 0 auto;
+    border-radius: 2rem;
+    padding: 2rem;  
+    background-color: rgba(255,255,255,0.25);
+}
+
+/***************/
+/*    Timer    */
+/***************/
+.timerContainer{
+    width: 100%;
+    max-width: 32rem;
+    height: 32rem;
+    padding: 0.5rem;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+}
+
+.border{
+    max-width: 30rem;
+    height: 30rem;
+    margin: 0.5rem auto;
+    border: 0.6rem solid var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    font-weight: 400;
+    font-size: 3.5rem;
+    margin-top: -2.5rem;
+    color: var(--color-third);
+}
+
+.countDown{
+    font-weight: 700;
+    font-size: 8rem;
+    color: var(--color-third);
+}
+
+/******************/
+/* Action Buttons */
+/******************/
+.actionBtn{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: fit-content;
+}
+
+.btn{
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    border-radius: 2.5rem;
+    font-size: 2.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.54rem;
+    background-color: var(--color-primary);
+    color: var(--color-third);
+    outline: 0.2rem solid var(--color-third);
+    transform: translateY(0);
+    transition: transform 330ms ease, box-shadow 0.3s ease;
+
+}
+
+.btn:hover{
+    background-color: #dd978e;
+    transform: translateY(-1rem);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn img{height: 2rem;}
+
+.removeClass{display: none;}
+
+/****************/
+/*    Status    */
+/****************/
+.status{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4.1rem;
+    max-width: fit-content;
+    background-color: var(--color-third);    
+}
+
+.deepWorkStatus,
+.breakStatus,
+.longBreakStatus{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    color: var(--color-font-primary);
+    border-radius: 4rem;    
+}
+
+.status .active{
+    color: var(--color-third);
+    background-color: var(--color-primary);
+    text-shadow: 0.1rem 0.1rem 0.2rem var(--color-font-primary);
+}
+
+.deepWorkScore,
+.breakScore,
+.longBreakScore{
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--color-font-primary);
+}
+
+.activeScore{
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--color-third);
+    text-shadow: 0.1rem 0.1rem 0.2rem var(--color-font-primary);
+}
+
+/************/
+/* Controls */
+/************/
+.controlsContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    border-radius: 4.1rem;
+    max-width: fit-content;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.controls img{cursor: pointer;}
+
+.controlTitle{
+    font-weight: bold;
+    font-size: 2.1rem; 
+    color: var(--color-third);   
+    text-shadow: 0.1rem 0.1rem 0.2rem var(--color-font-primary);
+}
+
+.controls input{
+    border: 0;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem 1rem;
+    font-size: 2.2rem;
+    color: var(--color-third);
+    background: linear-gradient(#f7b1a8, #dd978e);
+    border-bottom: calc(3px + .28vw) solid  #94655f;    
+}
+
+.controls input::-webkit-outer-spin-button,
+.controls input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.controls input:focus{outline: none;}
+
+
+
+
+/* ************************************************** */
+/* ************************************************** */
+/*                    Media Queries                   */
+/* ************************************************** */
+/* ************************************************** */
+@media(max-width: 96em){
+    .titleContainer{padding: 3.8rem 0;}
+    .titleContainer h1{font-size: 3.8rem;}
+}
+
+
+/***********************************/
+/* BELOW 1344px (Smaller desktops) */
+/***********************************/
+
+@media (max-width: 84em) {
+    .titleContainer{padding: 3.6rem 0;}
+    .titleContainer h1{font-size: 3.6rem;}
+}
+
+
+/************************************/
+/* BELOW 1200px (Landscape Tablets) */
+/************************************/
+@media (max-width: 75em) {
+  html {font-size: 56.25%;}
+  .titleContainer{padding: 3.4rem 0;}
+  .titleContainer h1{font-size: 3.4rem;}
+}
+
+
+/*************************/
+/* BELOW 944px (Tablets) */
+/*************************/
+@media (max-width: 59em) {
+    html {font-size: 50%;}
+    .titleContainer{padding: 3.2rem 0;}
+    .titleContainer h1{font-size: 3.2rem;}
+}
+  
+
+/*********************************/
+/* BELOW 704px (Smaller tablets) */
+/*********************************/
+@media (max-width: 44em) {
+    .titleContainer h1{font-size: 3rem;}
+}
+
+
+/************************/
+/* BELOW 544px (Phones) */
+/************************/
+@media (max-width: 34em) {  
+    .pomodoroContainer{
+        max-width: 100%;
+        border-radius: 0rem;
+        padding: 2rem 0.5rem;  
+        background: none;
+    }
+    .actionBtn{margin: 2rem auto;}
+    .btn{padding: 1.2rem 2.5rem;}
+}
+
+
+/******************************/
+/* BELOW 402px (small Phones) */
+/******************************/
+@media (max-width: 25.2em) {
+    .deepWorkStatus,
+    .breakStatus,
+    .longBreakStatus{font-size: 1.3rem; text-align: center;}
+    
+    .controlTitle{font-size: 1.7rem; text-align: center;}
+
+}

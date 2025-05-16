@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="⏰ Minimalist and distraction-free pomodoro alarm, ideal for productivity, deep work and study sessions"/>
+    <meta name="keyword" content="pomodoro app, pomodoroalarm, pomodoro timer, pomodoro, productivity"/>
+    <meta name="author" content="Thodoris Rizos" />
+    <title>Pomodoro Alarm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon/favicon.ico" />
+    <script defer src="script/script.js"></script>
+</head>
+<body>
+    <main class="backgroundImg">
+
+        <section class="titleContainer">
+            <h1>Promodoro Timer</h1>
+        </section>
+
+        <section class="pomodoroContainer">
+
+            <div class="timerContainer">
+                <div class="border">
+                    <div id="statusTitle" class="title">Ready?</div>
+
+                    <div class="timer">
+                        <div class="countDown">
+                            <span class="minutes">25</span>
+                            <span>:</span>
+                            <span class="seconds">00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="actionBtn">
+                <div id="start" class="btn"><img src="img/play.svg" alt="play button"> Start</div>
+                <div id="pause" class="btn removeClass"><img src="img/pause.svg" alt="pause button"> Pause</div>
+                <div id="restart" class="btn removeClass"><img src="img/repeat.svg" alt="restart button"> Restart</div>
+            </div>
+
+            <div class="status">
+                <div class="deepWorkStatus active">
+                    <h2>Deep Work:</h2>
+                    <div class="deepWorkScore activeScore">0</div>
+                </div>
+
+                <div class="breakStatus">
+                    <h2>Break:</h2>
+                    <div class="breakScore">0</div>
+                </div>
+
+                <div class="longBreakStatus">
+                    <h2>Long Break:</h2>
+                    <div class="longBreakScore">0</div>
+                </div>
+            </div>
+
+            <div class="controlsContainer">
+                <div class="controls">
+                    <i id="sessionUp"><img src="img/arrowUp.svg" alt="Arrow Up"></i>
+                    <span class="controlTitle">Session Length</span>
+                    <input id="sessionInput" type="number" value="25" max="30" min="1">
+                    <i id="sessionDown"><img src="img/arrowDown.svg" alt="Arrow Down"></i>
+                </div>
+                
+                <div class="controls">
+                    <i id="breakUp"><img src="img/arrowUp.svg" alt="Arrow Up"></i>
+                    <span class="controlTitle">Break Length</span>
+                    <input id="breakInput" type="number" value="5" max="10" min="1">
+                    <i id="breakDown"><img src="img/arrowDown.svg" alt="Arrow Down"></i>
+                </div>
+
+                <div class="controls">
+                    <i id="longBreakUp"><img src="img/arrowUp.svg" alt="Arrow Up"></i>
+                    <span class="controlTitle">Long Break Length</span>
+                    <input id="longBreakInput" type="number" value="10" max="20" min="1">
+                    <i id="longBreakDown"><img src="img/arrowDown.svg" alt="Arrow Down"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
